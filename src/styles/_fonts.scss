@@ -1,0 +1,33 @@
+$font-name: "Montserrat";
+$font-path: "../fonts";
+$font-list: (
+    name: "Montserrat-Regular",
+    weight: normal,
+  ),
+  (
+    name: "Montserrat-Medium",
+    weight: 500,
+  ),
+  (
+    name: "Montserrat-Bold",
+    weight: bold,
+  ),
+  (
+    name: "Montserrat-SemiBold",
+    weight: 600,
+  ),
+  (
+    name: "Montserrat-ExtraBold",
+    weight: 800,
+  );
+
+@each $font in $font-list {
+  $name: map-get($font, name);
+  $path: "#{$font-path}/#{$name}";
+
+  @font-face {
+    font-family: $font-name;
+    src: url("#{$path}.ttf");
+    font-weight: map-get($font, weight);
+  }
+}
