@@ -1,6 +1,5 @@
-@import "./variables";
-@import "./fonts";
+@import './common.scss';
 
-:root {
-    font-family: 'Montserrat';
+body {
+    overflow-x: hidden;
 }
