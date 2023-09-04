@@ -1,7 +1,14 @@
-import "./styles/global.scss";
+import Layout from './components/Layout';
+import './styles/main.scss';
 
 function App() {
-  return <h1>webperfection</h1>;
+    return (
+        <Layout>
+            <section>
+                <h2>Section 1</h2>
+            </section>
+        </Layout>
+    );
 }
 
 export default App;
