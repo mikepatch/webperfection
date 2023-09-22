@@ -1,18 +1,12 @@
+import React from 'react';
+
 import { PropsWithChildren } from '../../types';
+import Navigation from '../Navbar';
 
 export default function Layout({ children }: PropsWithChildren) {
     return (
         <div>
-            <header>
-                <h2>webperfection</h2>
-                <nav>
-                    <ul>
-                        <li>O projekcie</li>
-                        <li>O nas</li>
-                        <li>Kontakt</li>
-                    </ul>
-                </nav>
-            </header>
+            <Navigation />
             <main>{children}</main>
             <footer>
                 <p>&copy;2023 Copyright</p>
