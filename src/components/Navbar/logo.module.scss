@@ -1,0 +1,15 @@
+@import '@styles/common';
+
+nav .logoLink {
+    transform: translateX(-50%);
+
+    position: absolute;
+    left: 50%;
+}
+
+aside .logoLink {
+    transform: translateX(0);
+    margin: 0 auto;
+
+    position: static;
+}
