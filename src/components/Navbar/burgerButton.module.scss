@@ -1,0 +1,49 @@
+@import '@styles/common';
+
+.burgerIcon {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 2.5rem;
+    justify-content: space-around;
+    padding: 0;
+    width: 3rem;
+
+    // position: absolute;
+    // left: var(--space-lg);
+    // top: 3rem;
+
+    position: relative;
+
+    @include screen-size('lg') {
+        display: none;
+    }
+
+    div {
+        background: var(--color-dark);
+        border-radius: 10px;
+        height: 0.3rem;
+        transform-origin: 0.3rem;
+        transition: all 0.3s linear;
+        width: 3rem;
+    }
+
+    &.active {
+        div {
+            &:first-child {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
