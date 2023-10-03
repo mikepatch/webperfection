@@ -1,5 +1,9 @@
 @import './common.scss';
 
+* {
+    color: var(--color-text);
+}
+
 body {
     overflow-x: hidden;
 }

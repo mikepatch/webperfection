@@ -1,0 +1,10 @@
+@import '@styles/common';
+
+.socialMediaList {
+    align-items: center;
+    display: flex;
+    gap: var(--space-lg);
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
