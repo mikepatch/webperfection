@@ -1,14 +1,11 @@
-import React from 'react';
-
 import Layout from './components/Layout';
+import Home from './pages';
 import './styles/main.scss';
 
 function App() {
     return (
         <Layout>
-            <section>
-                <h2>Section 1</h2>
-            </section>
+            <Home />
         </Layout>
     );
 }

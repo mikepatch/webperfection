@@ -1,0 +1,24 @@
+@import '@styles/common';
+
+.heroWrapper {
+    align-items: center;
+    background: url(../../assets/images/hero-background.svg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10rem 1.5rem 0 1.5rem;
+    justify-content: flex-start;
+    width: 100%;
+
+    .heroImage {
+        flex-grow: 1;
+        height: 100%;
+    }
+
+    @include screen-size('lg') {
+        background: url(../../assets/images/hero-background-big.svg) no-repeat;
+        background-size: cover;
+        flex-wrap: nowrap;
+        padding: 7rem 2rem 10rem 2rem;
+    }
+}
