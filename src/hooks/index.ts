@@ -1,3 +1,4 @@
 import { useOnClickOutside } from './useOnClickOutside';
+import { useScroll } from './useScroll';
 
-export { useOnClickOutside };
+export { useOnClickOutside, useScroll };
