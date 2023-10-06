@@ -1,0 +1,30 @@
+@import '@styles/common';
+
+.heroIntroWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+
+    .heroSlogan {
+        color: var(--color-text-light);
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .heroDescription {
+        font-size: 0.9rem;
+    }
+
+    @include screen-size('lg') {
+        width: 50%;
+
+        .heroSlogan {
+            font-weight: 800;
+            text-align: left;
+        }
+
+        .heroDescription {
+            font-size: 0.7em;
+        }
+    }
+}

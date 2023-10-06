@@ -2,23 +2,24 @@
 
 .menuBar {
     background: var(--gradient-menubar);
-    box-shadow: var(--shadow-menubar);
+    box-shadow: var(--shadow-default);
     display: flex;
     flex-wrap: wrap;
+    min-height: 85vh;
     padding-bottom: var(--space-lg);
     transition: var(--transition-default);
     transform: translateX(-100%);
     visibility: hidden;
 
     position: absolute;
-    bottom: 20%;
     left: 0;
-    right: 20%;
+    right: 15%;
     top: 0;
 
     @include screen-size('lg') {
         background: transparent;
         box-shadow: none;
+        min-height: auto;
         padding: 0;
         transform: translateX(0);
         visibility: visible;
