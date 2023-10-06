@@ -5,6 +5,10 @@ nav .logoLink {
 
     position: absolute;
     left: 50%;
+
+    svg {
+        transition: var(--transition-default);
+    }
 }
 
 aside .logoLink {
