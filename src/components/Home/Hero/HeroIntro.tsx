@@ -1,5 +1,5 @@
 import styles from './heroIntro.module.scss';
-import Button from '../common';
+import Button from '../../common';
 
 export default function HeroIntro() {
     return (
