@@ -1,5 +1,5 @@
 import styles from './heroIntro.module.scss';
-import Button from '../common';
+import { Button } from '../../common';
 
 export default function HeroIntro() {
     return (
@@ -13,7 +13,7 @@ export default function HeroIntro() {
                 Twojego projektu, byś mógł skupić się na tym, co dla Ciebie najważniejsze - na
                 rozwijaniu Twojego pomysłu.
             </p>
-            <Button>Stwórz swoją aplikację z nami</Button>
+            <Button className={styles.ctaBtn}>Stwórz swoją aplikację z nami</Button>
         </section>
     );
 }

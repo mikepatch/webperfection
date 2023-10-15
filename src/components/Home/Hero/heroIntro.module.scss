@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-lg);
+    padding-top: 10rem;
 
     .heroSlogan {
         color: var(--color-text-light);
@@ -11,20 +12,14 @@
         text-align: center;
     }
 
-    .heroDescription {
-        font-size: 0.9rem;
-    }
-
     @include screen-size('lg') {
+        padding-top: 0;
         width: 50%;
 
         .heroSlogan {
+            font-size: 3rem;
             font-weight: 800;
             text-align: left;
-        }
-
-        .heroDescription {
-            font-size: 0.7em;
         }
     }
 }

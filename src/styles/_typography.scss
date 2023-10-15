@@ -26,6 +26,7 @@ $font-list: (
     $path: '#{$font-path}/#{$name}';
 
     @font-face {
+        font-display: swap;
         font-family: $font-name;
         src: url('#{$path}.ttf');
         font-weight: map-get($font, weight);
@@ -34,5 +35,5 @@ $font-list: (
 
 html {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.7rem);
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.2rem);
 }

@@ -9,9 +9,5 @@
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.2px;
-    padding: 10px 20px;
-
-    @include screen-size('lg') {
-        font-size: 0.6rem;
-    }
+    padding: var(--space-sm) var(--space-md);
 }
