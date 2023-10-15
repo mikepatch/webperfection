@@ -10,7 +10,7 @@
     left: 0;
 
     .navbarContent {
-        align-items: flex-start;
+        align-items: center;
         display: flex;
         margin: 0 auto;
         max-width: 1200px;
@@ -40,10 +40,6 @@
         .overlay {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        svg {
-            transform: scale(0.9) translateY(-25%);
         }
     }
 }

@@ -5,20 +5,26 @@
     background: url(../../../assets/images/hero-background.svg) no-repeat;
     background-size: cover;
     display: flex;
-    flex-wrap: wrap;
-    padding: 10rem 1.5rem 0 1.5rem;
-    justify-content: flex-start;
-    width: 100%;
+    flex-direction: column;
+    gap: var(--space-xl);
+    min-height: 100dvh;
+    padding: 0 var(--space-lg);
 
     .heroImage {
         flex-grow: 1;
         height: 100%;
+        width: 100%;
     }
 
     @include screen-size('lg') {
         background: url(../../../assets/images/hero-background-big.svg) no-repeat;
         background-size: cover;
+        background-position: 0 90%;
         flex-wrap: nowrap;
-        padding: 7rem 2rem 10rem 2rem;
+        flex-direction: row;
+
+        .heroImage {
+            width: 50%;
+        }
     }
 }
