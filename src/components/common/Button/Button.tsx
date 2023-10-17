@@ -17,7 +17,7 @@ export default function Button({
         bordered: styles.bordered,
     };
     return (
-        <a href={href} className={`${styles.btn} ${VARIANTS[variant]} ${className}`}>
+        <a href={href} role="button" className={`${styles.btn} ${VARIANTS[variant]} ${className}`}>
             {children}
         </a>
     );
