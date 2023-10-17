@@ -9,6 +9,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@styles': path.resolve(__dirname, './src/styles'),
+            '@src': path.resolve(__dirname, './src'),
         },
     },
     plugins: [react(), svgr()],

@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef } from 'react';
-import Sprites from '../../assets/icons/sprites.svg';
+import Sprites from '../../../assets/icons/sprites.svg';
 
 interface IconProps extends ComponentPropsWithoutRef<'svg'> {
     id: string;

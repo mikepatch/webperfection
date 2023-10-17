@@ -1,5 +1,6 @@
 import styles from './offer.module.scss';
-import { Icon } from '../../common';
+import Icon from '../../common/Icon';
+import BrandLogo from '../../common/BrandLogo';
 
 export default function Offer() {
     const OFFER_ITEMS = [
@@ -40,6 +41,7 @@ export default function Offer() {
         <section className={styles.offerWrapper}>
             <h3 className={styles.offerTitle}>Twój projekt, nasza pasja, minimalny koszt</h3>
             <ul className={styles.offerList}>{renderOfferItems}</ul>
+            <BrandLogo variant="mini" className={styles.logo} />
         </section>
     );
 }

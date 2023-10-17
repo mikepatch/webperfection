@@ -1,6 +1,6 @@
 @import '@styles/common';
 
-.btn {
+.ctaBtn {
     background: var(--color-primary);
     border: none;
     border-radius: 5px;
@@ -10,4 +10,9 @@
     line-height: 24px;
     letter-spacing: 0.2px;
     padding: var(--space-sm) var(--space-md);
+    text-decoration: none;
+
+    &.bordered {
+        border: 1px solid var(--color-text-light);
+    }
 }

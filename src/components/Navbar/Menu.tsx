@@ -1,9 +1,8 @@
-import React from 'react';
 import cn from 'classnames';
 
 import styles from './menu.module.scss';
-import Logo from './Logo';
 import SocialMediaBar from '../SocialMediaBar';
+import BrandLogo from '../common/BrandLogo';
 
 type MenuItem = {
     id: string;
@@ -31,7 +30,7 @@ export default function Menu({ isOpen, menuItems }: MenuProps) {
         <aside className={menuStyles}>
             <ul className={styles.menuList}>{renderMenuItems}</ul>
             <div className={styles.menuFooter}>
-                <Logo />
+                <BrandLogo className={styles.logo} />
                 <SocialMediaBar color="#E67027" />
             </div>
         </aside>
