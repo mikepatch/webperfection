@@ -40,6 +40,11 @@
         }
     }
 
+    .logo {
+        align-self: center;
+        max-height: 46px;
+    }
+
     @include screen-size('lg') {
         margin-top: 0;
 

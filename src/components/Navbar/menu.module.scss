@@ -76,5 +76,13 @@
         flex-direction: column;
         gap: var(--space-lg);
         margin: 0 auto;
+
+        .logo {
+            height: 80px;
+            margin: 0 auto;
+            transform: translateX(0);
+
+            position: static;
+        }
     }
 }

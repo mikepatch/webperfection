@@ -1,5 +1,6 @@
-import styles from './socialMediaBar.module.scss';
 import { Icon } from '../common';
+import styles from './socialMediaBar.module.scss';
+
 
 type SocialMediaBarProps = {
     color?: string;
