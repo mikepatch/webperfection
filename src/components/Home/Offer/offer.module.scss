@@ -21,6 +21,7 @@
 
         .offerItem {
             background: var(--color-text-light);
+            box-shadow: var(--shadow-light);
             display: flex;
             flex-direction: column;
             gap: var(--space-md);

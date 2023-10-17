@@ -1,4 +1,4 @@
-import { Button } from '../../common';
+import CTAButton from '../../common/CTAButton';
 import styles from './heroIntro.module.scss';
 
 export default function HeroIntro() {
@@ -13,9 +13,7 @@ export default function HeroIntro() {
                 Twojego projektu, byś mógł skupić się na tym, co dla Ciebie najważniejsze - na
                 rozwijaniu Twojego pomysłu.
             </p>
-            <Button href="#" className={styles.ctaBtn}>
-                Stwórz swoją aplikację z nami
-            </Button>
+            <CTAButton href="#">Stwórz swoją aplikację z nami</CTAButton>
         </section>
     );
 }

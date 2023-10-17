@@ -1,4 +1,4 @@
-import { Icon } from '../common';
+import Icon from '../common/Icon';
 import styles from './socialMediaBar.module.scss';
 
 

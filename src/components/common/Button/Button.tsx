@@ -1,24 +1,17 @@
+import cn from 'classnames';
+
 import { PropsWithChildren } from '../../../types';
 import styles from './button.module.scss';
 
 type ButtonProps = PropsWithChildren & {
-    href: string;
-    variant?: 'default' | 'bordered';
+    type: 'button' | 'submit' | 'reset';
+    onClick?: () => void;
 };
 
-export default function Button({
-    href,
-    variant = 'default',
-    children,
-    className = '',
-}: ButtonProps) {
-    const VARIANTS = {
-        default: '',
-        bordered: styles.bordered,
-    };
+export default function Button({ type = 'button', onClick, className, children }: ButtonProps) {
     return (
-        <a href={href} role="button" className={`${styles.btn} ${VARIANTS[variant]} ${className}`}>
+        <button type={type} onClick={onClick} className={cn(styles.btn, className)}>
             {children}
-        </a>
+        </button>
     );
 }
