@@ -33,7 +33,7 @@ export default function Offer() {
                 <Icon id={iconId} className={styles.offerItemIcon} />
                 <h4 className={styles.offerItemTitle}>{title}</h4>
             </header>
-            <p className={styles.offerItemDescription}>{description}</p>
+            <p className={styles.offerItemContent}>{description}</p>
         </li>
     ));
 
