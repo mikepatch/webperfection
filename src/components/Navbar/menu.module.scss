@@ -54,19 +54,28 @@
         @include screen-size('xl') {
             gap: var(--space-md);
         }
-    }
 
-    .menuLink {
-        display: block;
-        height: 100%;
-        font-size: 24px;
-        font-weight: 500;
-        text-decoration: none;
-        text-transform: uppercase;
-        width: fit-content;
+        .menuItem {
+            .menuLink {
+                display: block;
+                height: 100%;
+                font-size: 24px;
+                font-weight: 500;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: fit-content;
 
-        &.activePage {
-            border-bottom: 4px solid var(--color-secondary);
+                transition: var(--transition-default);
+
+                &:hover {
+                    transform: scale(1.04);
+                    letter-spacing: 0.5px;
+                }
+
+                &.activePage {
+                    border-bottom: 4px solid var(--color-secondary);
+                }
+            }
         }
     }
 

@@ -10,13 +10,14 @@ body {
 }
 
 main {
-    margin: 0 auto;
-    max-width: 1440px;
-    padding: 0 var(--space-lg);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 h4 {
@@ -29,4 +30,14 @@ h6 {
 
 p {
     font-size: 0.9rem;
+}
+
+@include screen-size('lg') {
+    main {
+        gap: var(--space-xl);
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
 }

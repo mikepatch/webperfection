@@ -19,7 +19,7 @@ export default function Menu({ isOpen, menuItems }: MenuProps) {
     const menuStyles = cn(styles.menuBar, isOpen && styles.active);
     const renderMenuItems = menuItems.map(
         ({ id, label, href }): JSX.Element => (
-            <li key={id}>
+            <li key={id} className={styles.menuItem}>
                 <a href={href} className={cn(styles.menuLink, styles.activePage)}>
                     {label}
                 </a>
