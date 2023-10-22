@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 import styles from './form.module.scss';
 import Button from '../../common/Button';
-import { FORM_FIELDS } from '../../constants';
+import { FORM_FIELDS } from '../../../constants';
 import { useForm } from '../../../hooks/useForm';
 
 export default function Form() {

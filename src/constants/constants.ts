@@ -1,4 +1,7 @@
-import { FormField } from '../../types';
+import { FormField, TeamMember } from '../types';
+import TeamImgFirst from '../assets/images/team-dev-1.png';
+import TeamImgSecond from '../assets/images/team-dev-2.png';
+import TeamImgThird from '../assets/images/team-dev-3.png';
 
 export const FORM_FIELDS: FormField[] = [
     {
@@ -41,4 +44,12 @@ export const FORM_FIELDS: FormField[] = [
         required: false,
         errorMessage: '',
     },
+];
+
+export const TEAM_MEMBERS: TeamMember[] = [
+    { id: 'team-member-1', role: 'Senior Back-end Developer', imgSrc: TeamImgFirst },
+    { id: 'team-member-2', role: 'Senior Front-end Developer', imgSrc: TeamImgSecond },
+    { id: 'team-member-3', role: 'Senior Fullstack Developer', imgSrc: TeamImgThird },
+    { id: 'team-member-4', role: 'Senior Fullstack Developer', imgSrc: TeamImgThird },
+    { id: 'team-member-5', role: 'Senior Fullstack Developer', imgSrc: TeamImgThird },
 ];

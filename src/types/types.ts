@@ -12,3 +12,9 @@ export type FormField = {
     required: boolean;
     errorMessage: string;
 }
+
+export type TeamMember = {
+    id: string;
+    role: string;
+    imgSrc: string;
+}
