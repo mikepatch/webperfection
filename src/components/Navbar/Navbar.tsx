@@ -1,11 +1,13 @@
 import { useRef, useState } from 'react';
 import cn from 'classnames';
 
-import BurgerButton from './BurgerButton';
 import styles from './navbar.module.scss';
+
+import BurgerButton from './BurgerButton';
 import Menu from './Menu';
-import { useOnClickOutside, useScroll } from '../../hooks';
 import BrandLogo from '../common/BrandLogo';
+import { useScroll } from '../../hooks/useScroll';
+import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 
 export default function Navbar() {
     const MENU_ITEMS = [
