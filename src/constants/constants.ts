@@ -1,7 +1,8 @@
-import { FormField, TeamMember } from '../types';
+import { FormField, TeamMember, Testimonial } from '../types';
 import TeamImgFirst from '../assets/images/team-dev-1.png';
 import TeamImgSecond from '../assets/images/team-dev-2.png';
 import TeamImgThird from '../assets/images/team-dev-3.png';
+import TestimonialImg from '../assets/images/testimonials-first.png';
 
 export const FORM_FIELDS: FormField[] = [
     {
@@ -52,4 +53,43 @@ export const TEAM_MEMBERS: TeamMember[] = [
     { id: 'team-member-3', role: 'Senior Fullstack Developer', imgSrc: TeamImgThird },
     { id: 'team-member-4', role: 'Senior Fullstack Developer', imgSrc: TeamImgThird },
     { id: 'team-member-5', role: 'Senior Fullstack Developer', imgSrc: TeamImgThird },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+    {
+        id: 0,
+        author: 'Regina Miles',
+        role: 'Designer',
+        rating: 4,
+        comment:
+            'This proved to be impossible using concepts of space and time. Einstein new view of time first and then',
+        imgSrc: TestimonialImg,
+    },
+    {
+        id: 1,
+        author: 'Regina Miles',
+        role: 'Designer',
+        rating: 4,
+        comment:
+            'This proved to be impossible using concepts of space and time. Einstein new view of time first and then',
+        imgSrc: TestimonialImg,
+    },
+    {
+        id: 2,
+        author: 'Regina Miles',
+        role: 'Designer',
+        rating: 2,
+        comment:
+            'This proved to be impossible using concepts of space and time. Einstein new view of time first and then',
+        imgSrc: TestimonialImg,
+    },
+    {
+        id: 3,
+        author: 'Regina Miles',
+        role: 'Designer',
+        rating: 5,
+        comment:
+            'This proved to be impossible using concepts of space and time. Einstein new view of time first and then',
+        imgSrc: TestimonialImg,
+    },
 ];
