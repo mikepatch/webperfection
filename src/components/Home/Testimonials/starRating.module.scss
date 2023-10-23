@@ -1,0 +1,14 @@
+@import '@styles/common';
+
+.ratingList {
+    display: flex;
+    gap: var(--space-xxs);
+    list-style: none;
+    padding: 0;
+
+    .ratingItem {
+        .ratingStar {
+            color: orange;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import '@styles/common';
+
+.slider {
+    width: 100%;
+
+    .sliderSlide {
+        max-width: 300px;
+        max-width: fit-content;
+    }
+
+    .sliderDot {
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        background: #000;
+        height: 10px;
+        margin: 0 4px;
+        opacity: 0.2;
+        width: 10px;
+    }
+
+    .sliderDotActive {
+        background: var(--color-primary);
+        opacity: 1;
+    }
+}
