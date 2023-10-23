@@ -1,8 +1,18 @@
-import { FormField, TeamMember, Testimonial } from '../types';
+import { FormField, MenuItem, TeamMember, Testimonial } from '../types';
 import TeamImgFirst from '../assets/images/team-dev-1.png';
 import TeamImgSecond from '../assets/images/team-dev-2.png';
 import TeamImgThird from '../assets/images/team-dev-3.png';
 import TestimonialImg from '../assets/images/testimonials-first.png';
+
+export const MENU_ITEMS: MenuItem[] = [
+    {
+        id: 'aboutProject',
+        label: 'O projekcie',
+        href: '/project',
+    },
+    { id: 'aboutUs', label: 'O nas', href: '/about' },
+    { id: 'contact', label: 'Kontakt', href: '/contact' },
+];
 
 export const FORM_FIELDS: FormField[] = [
     {

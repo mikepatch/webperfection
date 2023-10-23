@@ -1,0 +1,56 @@
+@import '@styles/common';
+
+.wrapper {
+    background: var(--color-primary);
+    .footerContent {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: var(--space-xl) var(--space-lg);
+
+        * {
+            color: #fff;
+        }
+
+        .nav {
+            .navTitle {
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            .navList {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-xs);
+                list-style: none;
+                margin-top: var(--space-xs);
+                padding: 0;
+            }
+        }
+
+        .address {
+            * {
+                font-size: 1rem;
+            }
+
+            .addressDetails {
+                font-style: normal;
+            }
+        }
+
+        .socials {
+            align-self: center;
+        }
+    }
+
+    @include screen-size('lg') {
+        .footerContent {
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
+    }
+}

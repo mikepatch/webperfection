@@ -4,6 +4,7 @@ import styles from './form.module.scss';
 import Button from '../../common/Button';
 import { FORM_FIELDS } from '../../../constants';
 import { useForm } from '../../../hooks/useForm';
+import Link from '../../common/Link';
 
 export default function Form() {
     const initialValues = {
@@ -72,9 +73,9 @@ export default function Form() {
                         );
                     })}
                     <small className={styles.regulations}>
-                        <a href="#" className={styles.regulationsLink}>
+                        <Link to="#" className={styles.regulationsLink}>
                             Regulamin i warunki współpracy
-                        </a>
+                        </Link>
                     </small>
                     <Button type="submit" className={styles.submitButton}>
                         Wyślij wiadomość
