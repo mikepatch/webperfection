@@ -3,26 +3,21 @@ import cn from 'classnames';
 import styles from './menu.module.scss';
 import SocialMediaBar from '../SocialMediaBar';
 import BrandLogo from '../common/BrandLogo';
-
-type MenuItem = {
-    id: string;
-    label: string;
-    href: string;
-};
+import { MENU_ITEMS } from '../../constants';
+import Link from '../common/Link';
 
 type MenuProps = {
     isOpen: Boolean;
-    menuItems: MenuItem[];
 };
 
-export default function Menu({ isOpen, menuItems }: MenuProps) {
+export default function Menu({ isOpen }: MenuProps) {
     const menuStyles = cn(styles.menuBar, isOpen && styles.active);
-    const renderMenuItems = menuItems.map(
+    const renderMenuItems = MENU_ITEMS.map(
         ({ id, label, href }): JSX.Element => (
             <li key={id} className={styles.menuItem}>
-                <a href={href} className={cn(styles.menuLink, styles.activePage)}>
+                <Link to={href} className={cn(styles.menuLink, styles.activePage)}>
                     {label}
-                </a>
+                </Link>
             </li>
         )
     );

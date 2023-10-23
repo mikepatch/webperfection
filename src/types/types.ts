@@ -2,6 +2,12 @@ import { ReactNode } from 'react';
 
 export type PropsWithChildren<P = unknown> = P & { children: ReactNode; className?: string };
 
+export type MenuItem = {
+    id: string;
+    label: string;
+    href: string;
+};
+
 export type FormField = {
     id: string;
     name: string;
