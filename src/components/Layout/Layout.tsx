@@ -1,4 +1,5 @@
 import { PropsWithChildren } from '../../types';
+import Footer from '../Footer';
 import Navigation from '../Navbar';
 
 export default function Layout({ children }: PropsWithChildren) {
@@ -6,9 +7,7 @@ export default function Layout({ children }: PropsWithChildren) {
         <div>
             <Navigation />
             {children}
-            <footer>
-                <p>&copy;2023 Copyright</p>
-            </footer>
+            <Footer />
         </div>
     );
 }
