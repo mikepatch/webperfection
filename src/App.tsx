@@ -1,5 +1,13 @@
+import Layout from './components/Layout';
+import Home from './pages';
+import './styles/main.scss';
+
 function App() {
-  return <h1>webperfection</h1>;
+    return (
+        <Layout>
+            <Home />
+        </Layout>
+    );
 }
 
 export default App;

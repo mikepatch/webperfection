@@ -1,0 +1,35 @@
+:root {
+    //COLORS
+    --color-primary: #23a6f0;
+    --color-secondary: #16b0e3;
+    --color-dark: #3c403d;
+    --color-text: #252b42;
+    --color-text-secondary: #737373;
+    --color-text-light: #ffffff;
+    --color-background-light: #f3f3f3;
+    --color-grey: #e6e6e6;
+    --color-grey-strong: #bdbdbd;
+    --color-grey-light: #f9f9f9;
+    --color-danger: #ff6347;
+
+    //GRADIENTS
+    --gradient-menubar: linear-gradient(166deg, #e4e4e4 7.17%, #fff 56.51%);
+
+    //SHADOWS
+    --shadow-default: 8px -1px 12px 0px rgba(0, 0, 0, 0.17);
+    --shadow-strong: 0px -1px 12px 5px rgba(0, 0, 0, 0.2);
+    --shadow-light: 8px 8px 20px 0px rgba(0, 0, 0, 0.02);
+
+    //SPACING
+    --space-unit: 1em;
+    --space-xxs: calc(0.25 * var(--space-unit));
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-sm: calc(0.75 * var(--space-unit));
+    --space-md: calc(1.25 * var(--space-unit));
+    --space-lg: calc(2 * var(--space-unit));
+    --space-xl: calc(3.25 * var(--space-unit));
+    --space-xxl: calc(5.25 * var(--space-unit));
+
+    //TRANSITIONS
+    --transition-default: 0.3s ease-in-out;
+}

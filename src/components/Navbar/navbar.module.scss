@@ -1,0 +1,57 @@
+@import '@styles/common';
+
+.navbar {
+    padding: var(--space-lg);
+    transition: var(--transition-default);
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    .navbarContent {
+        align-items: center;
+        display: flex;
+        margin: 0 auto;
+        max-width: 1200px;
+
+        .logoLink {
+            transform: translateX(-50%);
+
+            position: absolute;
+            left: 50%;
+
+            .logoImage {
+                max-height: 80px;
+            }
+        }
+
+        @include screen-size('lg') {
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    .overlay {
+        background: var(--gradient-menubar);
+        box-shadow: var(--shadow-default);
+        height: 100%;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: var(--transition-default);
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &.scrolled {
+        .overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '@styles/common';
+
+.socialMediaList {
+    align-items: center;
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+    padding: 0;
+
+    .socialMediaItem {
+        width: 2em;
+
+        svg {
+            height: 2em;
+        }
+    }
+}

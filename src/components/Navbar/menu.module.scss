@@ -1,0 +1,97 @@
+@import '@styles/common';
+
+.menuBar {
+    background: var(--gradient-menubar);
+    box-shadow: var(--shadow-default);
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 85vh;
+    padding-bottom: var(--space-lg);
+    transition: var(--transition-default);
+    transform: translateX(-100%);
+    visibility: hidden;
+
+    position: absolute;
+    left: 0;
+    right: 15%;
+    top: 0;
+
+    @include screen-size('lg') {
+        background: transparent;
+        box-shadow: none;
+        min-height: auto;
+        padding: 0;
+        transform: translateX(0);
+        visibility: visible;
+
+        position: static;
+
+        .menuList ~ .menuFooter {
+            display: none;
+        }
+    }
+
+    &.active {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .menuList {
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+        gap: var(--space-lg);
+        list-style: none;
+        padding: 7rem 2rem 0 2rem;
+        transition: var(--transition-default);
+
+        @include screen-size('lg') {
+            flex-direction: row;
+            gap: var(--space-xs);
+            padding: 0;
+        }
+
+        @include screen-size('xl') {
+            gap: var(--space-md);
+        }
+
+        .menuItem {
+            .menuLink {
+                display: block;
+                height: 100%;
+                font-size: 24px;
+                font-weight: 500;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: fit-content;
+
+                transition: var(--transition-default);
+
+                &:hover {
+                    transform: scale(1.04);
+                    letter-spacing: 0.5px;
+                }
+
+                &.activePage {
+                    border-bottom: 4px solid var(--color-secondary);
+                }
+            }
+        }
+    }
+
+    .menuFooter {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+        margin: 0 auto;
+
+        .logo {
+            height: 80px;
+            margin: 0 auto;
+            transform: translateX(0);
+
+            position: static;
+        }
+    }
+}

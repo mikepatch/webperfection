@@ -1,0 +1,48 @@
+@import './common.scss';
+
+* {
+    color: var(--color-text);
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--color-background-light);
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h6 {
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+@include screen-size('lg') {
+    main {
+        gap: var(--space-xl);
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
