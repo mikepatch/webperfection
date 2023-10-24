@@ -1,10 +1,10 @@
+import { NavLink } from 'react-router-dom';
 import cn from 'classnames';
 
 import styles from './menu.module.scss';
 import SocialMediaBar from '../SocialMediaBar';
 import BrandLogo from '../common/BrandLogo';
 import { MENU_ITEMS } from '../../constants';
-import Link from '../common/Link';
 
 type MenuProps = {
     isOpen: Boolean;
@@ -12,12 +12,18 @@ type MenuProps = {
 
 export default function Menu({ isOpen }: MenuProps) {
     const menuStyles = cn(styles.menuBar, isOpen && styles.active);
+
     const renderMenuItems = MENU_ITEMS.map(
         ({ id, label, href }): JSX.Element => (
             <li key={id} className={styles.menuItem}>
-                <Link to={href} className={cn(styles.menuLink, styles.activePage)}>
+                <NavLink
+                    to={href}
+                    className={({ isActive }) =>
+                        isActive ? cn(styles.menuLink, styles.activePage) : styles.menuLink
+                    }
+                >
                     {label}
-                </Link>
+                </NavLink>
             </li>
         )
     );
