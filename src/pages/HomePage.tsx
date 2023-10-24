@@ -6,7 +6,7 @@ import Summary from '../components/Home/Summary';
 import Team from '../components/Home/Team';
 import Testimonials from '../components/Home/Testimonials';
 
-export default function Home() {
+export default function HomePage() {
     return (
         <>
             <Hero />
