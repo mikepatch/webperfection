@@ -6,6 +6,7 @@
     grid-template-areas:
         'header header'
         'content content';
+    overflow: hidden;
     width: 100%;
 
     position: relative;
