@@ -1,3 +1,4 @@
-import Home from './Home.page';
+import HomePage from './HomePage';
+import NotFoundPage from './NotFoundPage';
 
-export default Home;
+export { HomePage, NotFoundPage };
