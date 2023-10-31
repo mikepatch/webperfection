@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { Link as RouterLink } from 'react-router-dom';
 import { LinkHTMLAttributes } from 'react';
 
 import { PropsWithChildren } from '../../../types';
@@ -11,8 +12,8 @@ type LinkProps = LinkHTMLAttributes<HTMLAnchorElement> &
 
 export default function Link({ to, children, className, ...props }: LinkProps) {
     return (
-        <a href={to} className={cn(styles.link, className ? className : null)} {...props}>
+        <RouterLink to={to} className={cn(styles.link, className ? className : null)} {...props}>
             {children}
-        </a>
+        </RouterLink>
     );
 }

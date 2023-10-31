@@ -1,12 +1,19 @@
+import {  Route, BrowserRouter, Routes } from 'react-router-dom';
+
 import Layout from './components/Layout';
-import Home from './pages';
 import './styles/main.scss';
+import { HomePage, NotFoundPage } from './pages';
 
 function App() {
     return (
-        <Layout>
-            <Home />
-        </Layout>
+        <BrowserRouter>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+            </Layout>
+        </BrowserRouter>
     );
 }
 
