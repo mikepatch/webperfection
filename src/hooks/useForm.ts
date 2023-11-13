@@ -1,19 +1,16 @@
-import { useState } from 'react';
-import { FormField } from '../types';
-
-type FormState = {
-    [key: string]: string;
-};
-
-type ErrorsState = {
-    [key: string]: string;
-};
+import { ChangeEvent, FormEvent, useState } from 'react';
+import { ErrorsState, FormField, FormState, ServerResponseState } from '../types';
+import { sendToWebhook } from '@/utils';
 
 export function useForm(initialValues: FormState, fields: FormField[]) {
     const [values, setValues] = useState<FormState>(initialValues);
+    const [serverResponse, setServerResponse] = useState<ServerResponseState>({
+        error: false,
+        success: false,
+    });
     const [errors, setErrors] = useState<ErrorsState>({});
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
 
         setValues({
@@ -40,13 +37,23 @@ export function useForm(initialValues: FormState, fields: FormField[]) {
         setErrors((prevErrors) => ({ ...prevErrors, [name]: validationError }));
     };
 
-    const handleSubmit = (e: React.FormEvent, callback: () => void) => {
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
+        const target = e.target as HTMLFormElement;
+        const webhookUrl = target.action;
 
         const validationErrors = validate();
 
         if (Object.keys(validationErrors).length === 0) {
-            callback();
+            const response = await sendToWebhook(webhookUrl, values);
+            if (!response) {
+                return setServerResponse({
+                    ...serverResponse,
+                    error: true,
+                });
+            }
+
+            setServerResponse({ error: false, success: true });
             setValues(initialValues);
         } else {
             setErrors(validationErrors);
@@ -58,7 +65,7 @@ export function useForm(initialValues: FormState, fields: FormField[]) {
 
         fields.forEach((field) => {
             if (field.required && !values[field.name]) {
-                validationErrors[field.name] = `Pole jest wymagane.`;
+                validationErrors[field.name] = `Uzupełnij pole.`;
             } else if (field.pattern && !new RegExp(field.pattern).test(values[field.name])) {
                 validationErrors[field.name] = field.errorMessage;
             }
@@ -69,6 +76,7 @@ export function useForm(initialValues: FormState, fields: FormField[]) {
 
     return {
         values,
+        serverResponse,
         errors,
         handleChange,
         handleSubmit,
