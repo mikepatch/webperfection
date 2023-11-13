@@ -1,0 +1,103 @@
+@import '@styles/common';
+
+.descriptionWrapper {
+    background: var(--color-primary);
+    overflow: hidden;
+
+    .sectionImage {
+        background: url(../../assets/images/description-young-talents.png) no-repeat;
+        background-position-x: 50%;
+        background-size: cover;
+        height: 420px;
+    }
+
+    .body {
+        background: url(../../assets/images/description-shape-1.png) no-repeat;
+        background-position-y: 50%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        mix-blend-mode: lighten;
+        padding: var(--space-xl) var(--space-lg);
+
+        .header {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+            .headerImage {
+                width: 185px;
+            }
+
+            .headerTitle {
+                color: var(--color-text-light);
+                text-align: center;
+            }
+        }
+
+        .contentWrapper {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+
+            .content {
+                color: var(--color-text-light);
+                font-weight: 500;
+            }
+        }
+
+        .ctaButton {
+            align-self: flex-end;
+            margin-top: var(--space-lg);
+        }
+    }
+
+    @include screen-size('lg') {
+        align-items: center;
+        display: flex;
+        height: 700px;
+
+        position: relative;
+
+        .sectionImage {
+            background: url(../../assets/images/description-young-talents-big.jpeg) no-repeat;
+            background-position-x: 50%;
+            background-size: cover;
+            flex: 2;
+            height: 100%;
+        }
+
+        .body {
+            background: url(../../assets/images/description-shape-1-big.png) no-repeat;
+            background-size: cover;
+            mix-blend-mode: lighten;
+
+            flex: 3;
+            gap: var(--space-lg);
+
+            .header {
+                .headerTitle {
+                    text-align: left;
+                }
+
+                .headerImage {
+                    width: 420px;
+
+                    position: absolute;
+                    right: -150px;
+                    top: -80px;
+                    z-index: -1;
+                }
+            }
+            .ctaButton {
+                margin: 0;
+            }
+        }
+    }
+
+    @include screen-size('xl') {
+        .body {
+            padding-right: var(--space-xxl);
+        }
+    }
+}

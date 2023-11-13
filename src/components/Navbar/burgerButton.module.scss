@@ -11,10 +11,6 @@
     padding: 0;
     width: 3rem;
 
-    // position: absolute;
-    // left: var(--space-lg);
-    // top: 3rem;
-
     position: relative;
 
     @include screen-size('lg') {

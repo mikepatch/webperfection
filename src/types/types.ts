@@ -1,4 +1,10 @@
-import { ReactNode } from 'react';
+import {
+    ChangeEvent,
+    ComponentPropsWithoutRef,
+    FormEvent,
+    LinkHTMLAttributes,
+    ReactNode,
+} from 'react';
 
 export type PropsWithChildren<P = unknown> = P & { children: ReactNode; className?: string };
 
@@ -6,6 +12,16 @@ export type MenuItem = {
     id: string;
     label: string;
     href: string;
+};
+
+export type MenuProps = {
+    isOpen: Boolean;
+    closeMenu: () => void;
+};
+
+export type BurgerButtonProps = {
+    isOpen: Boolean;
+    toggleMenu: () => void;
 };
 
 export type FormField = {
@@ -17,6 +33,33 @@ export type FormField = {
     type: 'text' | 'number' | 'email' | 'submit' | 'textarea';
     required: boolean;
     errorMessage: string;
+};
+
+export type FormProps = {
+    values: FormState;
+    errors: ErrorsState;
+    fields: FormField[];
+    onSubmit: (e: FormEvent) => Promise<void>;
+    onInputChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    title?: string;
+};
+
+export type LabelProps = PropsWithChildren & {
+    id: string;
+};
+
+export type TextareaProps = {
+    id: string;
+    required: boolean;
+    rows?: number;
+    className?: string;
+};
+
+export type InputProps = {
+    id: string;
+    type: string;
+    required: boolean;
+    className?: string;
 };
 
 export type TeamMember = {
@@ -34,4 +77,72 @@ export type Testimonial = {
     rating: StarRatingValue;
     comment: string;
     imgSrc: string;
+};
+
+export type StarRatingProps = {
+    rating: StarRatingValue;
+    className?: string;
+};
+
+export type FormState = {
+    [key: string]: string;
+};
+
+export type ServerResponseState = {
+    error: boolean;
+    success: boolean;
+};
+
+export type ErrorsState = {
+    [key: string]: string;
+};
+
+export type BrandLogoProps = {
+    variant?: 'full' | 'mini';
+    className?: string;
+};
+
+export type ButtonProps = PropsWithChildren & {
+    onClick?: () => void;
+    type?: 'button' | 'submit' | 'reset';
+};
+
+export type CTAButtonProps = PropsWithChildren & {
+    href: string;
+    variant?: 'bordered';
+};
+
+export type IconProps = ComponentPropsWithoutRef<'svg'> & {
+    id: string;
+};
+
+export type LinkProps = LinkHTMLAttributes<HTMLAnchorElement> &
+    PropsWithChildren & {
+        to: string;
+    };
+
+export type PopupProps = {
+    text: string;
+    title?: string;
+    emoji?: string;
+    buttonText?: string;
+    closePopup: () => void;
+};
+
+export type AutoPlay = {
+    delay: number;
+};
+
+export type SliderProps = PropsWithChildren & {
+    autoplay?: AutoPlay;
+};
+
+export type SocialMediaBarProps = {
+    color?: string;
+};
+
+export type SocialMediaItem = {
+    id: string;
+    iconId: string;
+    href: string;
 };

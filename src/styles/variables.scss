@@ -10,7 +10,7 @@
     --color-grey: #e6e6e6;
     --color-grey-strong: #bdbdbd;
     --color-grey-light: #f9f9f9;
-    --color-danger: #ff6347;
+    --color-danger: #e4806f;
 
     //GRADIENTS
     --gradient-menubar: linear-gradient(166deg, #e4e4e4 7.17%, #fff 56.51%);
@@ -32,4 +32,5 @@
 
     //TRANSITIONS
     --transition-default: 0.3s ease-in-out;
+    --transition-fast: 0.15s ease-in-out;
 }

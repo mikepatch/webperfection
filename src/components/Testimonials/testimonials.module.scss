@@ -1,0 +1,51 @@
+@import '@styles/common';
+
+.testimonialsWrapper {
+    width: 100%;
+
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+    .testimonial {
+        display: flex;
+        gap: var(--space-md);
+        max-width: 350px;
+        padding: var(--space-xl) 0;
+
+        .testimonialImage {
+            object-fit: cover;
+        }
+
+        .testimonialBody {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+
+            .testimonialRole {
+                display: block;
+                color: var(--color-text-secondary);
+                font-weight: 600;
+                margin-top: -3px;
+            }
+
+            .testimonialRating {
+                margin-top: var(--space-sm);
+            }
+
+            .testimonialComment {
+                color: var(--color-text-secondary);
+            }
+        }
+    }
+
+    @include screen-size('lg') {
+        .testimonial {
+            max-width: 450px;
+
+            .testimonialAuthor {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

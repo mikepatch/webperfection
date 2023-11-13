@@ -1,9 +1,5 @@
-import { ComponentPropsWithoutRef } from 'react';
-import Sprites from '../../../assets/icons/sprites.svg';
-
-interface IconProps extends ComponentPropsWithoutRef<'svg'> {
-    id: string;
-}
+import { IconProps } from '@/types';
+import Sprites from '@/assets/icons/sprites.svg';
 
 export default function Icon({ id, ...props }: IconProps) {
     return (

@@ -6,15 +6,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import styles from './slider.module.scss';
-import { PropsWithChildren } from '../../../types';
-
-type AutoPlay = {
-    delay: number;
-};
-
-type SliderProps = PropsWithChildren & {
-    autoplay?: AutoPlay;
-};
+import { SliderProps } from '@/types';
 
 export default function Slider({ autoplay, children }: SliderProps) {
     return (

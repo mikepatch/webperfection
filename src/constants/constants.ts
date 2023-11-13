@@ -1,4 +1,4 @@
-import { FormField, MenuItem, TeamMember, Testimonial } from '../types';
+import { FormField, MenuItem, SocialMediaItem, TeamMember, Testimonial } from '../types';
 import TeamImgFirst from '../assets/images/team-dev-1.png';
 import TeamImgSecond from '../assets/images/team-dev-2.png';
 import TeamImgThird from '../assets/images/team-dev-3.png';
@@ -8,10 +8,52 @@ export const MENU_ITEMS: MenuItem[] = [
     {
         id: 'aboutProject',
         label: 'O projekcie',
-        href: '/',
+        href: '/#descriptionSection',
     },
-    { id: 'aboutUs', label: 'O nas', href: '/about' },
-    { id: 'contact', label: 'Kontakt', href: '/contact' },
+    { id: 'aboutUs', label: 'O nas', href: '/#summarySection' },
+    { id: 'contact', label: 'Kontakt', href: '/#contactFormSection' },
+];
+
+export const OFFER_ITEMS = [
+    {
+        id: 1,
+        title: 'Transparentność umowy',
+        iconId: 'icon-chat',
+        description:
+            'U nas nie musisz martwić się o koszty i negocjacje. Gramy w otwarte karty i przedstawiamy jasne warunki współpracy. Wspólnie zdecydujemy, jak najlepiej zrealizować Twój projekt przy maksymalnej transparentności.',
+    },
+    {
+        id: 2,
+        title: 'Minimalne  koszty dla Ciebie',
+        iconId: 'icon-pay',
+        description:
+            'Dzięki wykorzystaniu zespołu juniorów i nadzoru Seniora, możemy zrealizować Twój projekt z minimalnym nakładem finansowym.',
+    },
+    {
+        id: 3,
+        title: 'Doświadczenie dla juniorów',
+        iconId: 'icon-computer',
+        description:
+            'Zespoły składające się z absolwentów mentoringu Devmentor.pl to pasjonaci IT, którzy chcą zdobyć praktyczne doświadczenie w branży. Dzięki nam, Twoja aplikacja zostanie zrealizowana przez ludzi, którzy chcą się rozwijać w swoim zawodzie.',
+    },
+];
+
+export const SOCIAL_MEDIA_ITEMS: SocialMediaItem[] = [
+    {
+        id: 'linkedIn',
+        iconId: 'icon-linkedin',
+        href: 'link',
+    },
+    {
+        id: 'facebook',
+        iconId: 'icon-facebook',
+        href: 'link',
+    },
+    {
+        id: 'youtube',
+        iconId: 'icon-youtube',
+        href: 'link',
+    },
 ];
 
 export const FORM_FIELDS: FormField[] = [
@@ -56,6 +98,15 @@ export const FORM_FIELDS: FormField[] = [
         errorMessage: '',
     },
 ];
+
+const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL;
+
+export const FORM_ATTRIBUTES = {
+    title: 'Wypełnij formularz i dowiedz się, jak możemy Ci pomóc.',
+    action: WEBHOOK_URL,
+    method: 'POST',
+    fields: FORM_FIELDS,
+};
 
 export const TEAM_MEMBERS: TeamMember[] = [
     { id: 'team-member-1', role: 'Senior Back-end Developer', imgSrc: TeamImgFirst },
@@ -103,3 +154,16 @@ export const TESTIMONIALS: Testimonial[] = [
         imgSrc: TestimonialImg,
     },
 ];
+
+export const FORM_POPUP = {
+    error: {
+        title: 'Coś poszło nie tak...',
+        emoji: '🙁',
+        text: 'Spróbuj jeszcze raz.',
+    },
+    success: {
+        title: 'Dziękujemy za kontakt!',
+        emoji: '🥳',
+        text: 'Wkrótce otrzymasz odpowiedź',
+    },
+};
