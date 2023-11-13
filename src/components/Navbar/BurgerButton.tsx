@@ -1,11 +1,7 @@
 import cn from 'classnames';
 
 import styles from './burgerButton.module.scss';
-
-type BurgerButtonProps = {
-    isOpen: Boolean;
-    toggleMenu: () => void;
-};
+import { BurgerButtonProps } from '@/types';
 
 export default function BurgerButton({ isOpen, toggleMenu }: BurgerButtonProps) {
     const buttonStyles = cn(styles.burgerIcon, isOpen && styles.active);

@@ -1,12 +1,7 @@
 import cn from 'classnames';
 
-import { PropsWithChildren } from '../../../types';
 import styles from './button.module.scss';
-
-type ButtonProps = PropsWithChildren & {
-    onClick?: () => void;
-    type?: 'button' | 'submit' | 'reset';
-};
+import { ButtonProps } from '@/types';
 
 export default function Button({ type = 'button', onClick, className, children }: ButtonProps) {
     return (

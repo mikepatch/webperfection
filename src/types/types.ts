@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ComponentPropsWithoutRef, LinkHTMLAttributes, ReactNode } from 'react';
 
 export type PropsWithChildren<P = unknown> = P & { children: ReactNode; className?: string };
 
@@ -6,6 +6,16 @@ export type MenuItem = {
     id: string;
     label: string;
     href: string;
+};
+
+export type MenuProps = {
+    isOpen: Boolean;
+    closeMenu: () => void;
+};
+
+export type BurgerButtonProps = {
+    isOpen: Boolean;
+    toggleMenu: () => void;
 };
 
 export type FormField = {
@@ -34,4 +44,72 @@ export type Testimonial = {
     rating: StarRatingValue;
     comment: string;
     imgSrc: string;
+};
+
+export type StarRatingProps = {
+    rating: StarRatingValue;
+    className?: string;
+};
+
+export type FormState = {
+    [key: string]: string;
+};
+
+export type ServerResponseState = {
+    error: boolean;
+    success: boolean;
+};
+
+export type ErrorsState = {
+    [key: string]: string;
+};
+
+export type BrandLogoProps = {
+    variant?: 'full' | 'mini';
+    className?: string;
+};
+
+export type ButtonProps = PropsWithChildren & {
+    onClick?: () => void;
+    type?: 'button' | 'submit' | 'reset';
+};
+
+export type CTAButtonProps = PropsWithChildren & {
+    href: string;
+    variant?: 'bordered';
+};
+
+export type IconProps = ComponentPropsWithoutRef<'svg'> & {
+    id: string;
+};
+
+export type LinkProps = LinkHTMLAttributes<HTMLAnchorElement> &
+    PropsWithChildren & {
+        to: string;
+    };
+
+export type PopupProps = {
+    text: string;
+    title?: string;
+    emoji?: string;
+    buttonText?: string;
+    closePopup: () => void;
+};
+
+export type AutoPlay = {
+    delay: number;
+};
+
+export type SliderProps = PropsWithChildren & {
+    autoplay?: AutoPlay;
+};
+
+export type SocialMediaBarProps = {
+    color?: string;
+};
+
+export type SocialMediaItem = {
+    id: string;
+    iconId: string;
+    href: string;
 };

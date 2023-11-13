@@ -1,10 +1,6 @@
-import LogoFull from '@src/assets/images/brand-logo-full.png';
-import LogoMini from '@src/assets/images/brand-logo-mini.png';
-
-type BrandLogoProps = {
-    variant?: 'full' | 'mini';
-    className?: string;
-};
+import { BrandLogoProps } from '@/types';
+import LogoFull from '@/assets/images/brand-logo-full.png';
+import LogoMini from '@/assets/images/brand-logo-mini.png';
 
 export default function BrandLogo({ variant = 'full', className }: BrandLogoProps) {
     const VARIANTS = {
