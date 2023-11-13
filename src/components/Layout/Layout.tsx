@@ -1,13 +1,15 @@
 import styles from './layout.module.scss';
-import { PropsWithChildren } from '../../types';
+import { PropsWithChildren } from '@/types';
 import Footer from '../Footer';
 import Navigation from '../Navbar';
+import Hero from '../Hero';
 
 export default function Layout({ children }: PropsWithChildren) {
     return (
         <div className={styles.wrapper}>
             <Navigation />
-            {children}
+            <Hero />
+            <main>{children}</main>
             <Footer />
         </div>
     );
