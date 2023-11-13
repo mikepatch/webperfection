@@ -1,19 +1,23 @@
-import {  Route, BrowserRouter, Routes } from 'react-router-dom';
-
-import Layout from './components/Layout';
 import './styles/main.scss';
-import { HomePage, NotFoundPage } from './pages';
+
+import ContactForm from './components/ContactForm';
+import Description from './components/Description';
+import Layout from './components/Layout';
+import Offer from './components/Offer';
+import Summary from './components/Summary';
+import Team from './components/Team';
+import Testimonials from './components/Testimonials';
 
 function App() {
     return (
-        <BrowserRouter>
-            <Layout>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                </Routes>
-            </Layout>
-        </BrowserRouter>
+        <Layout>
+            <Offer />
+            <ContactForm />
+            <Description />
+            <Team />
+            <Summary />
+            <Testimonials />
+        </Layout>
     );
 }
 
