@@ -1,5 +1,5 @@
 import styles from './footer.module.scss';
-import { MENU_ITEMS } from '../../constants';
+import { MENU_ITEMS } from '@/constants';
 import SocialMediaBar from '../SocialMediaBar';
 import Link from '../common/Link';
 

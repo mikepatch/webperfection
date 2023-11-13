@@ -1,12 +1,11 @@
 import styles from './summary.module.scss';
-
-import Button from '../../common/Button';
-import ImageSmall from '@src/assets/images/summary-mateusz-small.png';
-import ImageBig from '@src/assets/images/summary-mateusz-big.png';
+import Button from '@/components/common/Button';
+import ImageSmall from '@/assets/images/summary-mateusz-small.png';
+import ImageBig from '@/assets/images/summary-mateusz-big.png';
 
 export default function Summary() {
     return (
-        <section className={styles.wrapper}>
+        <section id="summarySection" className={styles.summaryWrapper}>
             <header className={styles.header}>
                 <h3 className={styles.headerTitle}>
                     Twój pomysł na aplikację – nasza pasja i doświadczenie!

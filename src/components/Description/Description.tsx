@@ -1,10 +1,10 @@
 import styles from './description.module.scss';
-import HeaderImage from '@src/assets/images/description-header-logo.png';
-import CTAButton from '../../common/CTAButton';
+import HeaderImage from '@/assets/images/description-header-logo.png';
+import CTAButton from '@/components/common/CTAButton';
 
 export default function Description() {
     return (
-        <section className={styles.wrapper}>
+        <section id="descriptionSection" className={styles.descriptionWrapper}>
             <div className={styles.sectionImage} />
             <article className={styles.body}>
                 <header className={styles.header}>

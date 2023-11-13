@@ -1,12 +1,7 @@
 import cn from 'classnames';
 
 import styles from './starRating.module.scss';
-import { StarRatingValue } from '../../../types';
-
-type StarRatingProps = {
-    rating: StarRatingValue;
-    className?: string;
-};
+import { StarRatingProps } from '@/types';
 
 export default function StarRating({ rating, className }: StarRatingProps) {
     return (

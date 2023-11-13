@@ -1,8 +1,7 @@
 @import '@styles/common';
 
-.wrapper {
+.testimonialsWrapper {
     width: 100%;
-    // padding: 0 var(--space-md);
 
     .header {
         display: flex;
@@ -11,10 +10,8 @@
     .testimonial {
         display: flex;
         gap: var(--space-md);
-        // max-height: 335px;
         max-width: 350px;
         padding: var(--space-xl) 0;
-        // padding: 0 var(--space-sm);
 
         .testimonialImage {
             object-fit: cover;

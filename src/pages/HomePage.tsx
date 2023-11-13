@@ -1,10 +1,10 @@
-import Description from '../components/Home/Description';
-import Form from '../components/Home/Form';
-import Hero from '../components/Home/Hero';
-import Offer from '../components/Home/Offer';
-import Summary from '../components/Home/Summary';
-import Team from '../components/Home/Team';
-import Testimonials from '../components/Home/Testimonials';
+import Description from '../components/Description';
+import Form from '../components/ContactForm';
+import Hero from '../components/Hero';
+import Offer from '../components/Offer';
+import Summary from '../components/Summary';
+import Team from '../components/Team';
+import Testimonials from '../components/Testimonials';
 
 export default function HomePage() {
     return (

@@ -1,8 +1,8 @@
 import styles from './team.module.scss';
-import { TEAM_MEMBERS } from '../../../constants';
-import { TeamMember } from '../../../types';
-import BrandLogo from '../../common/BrandLogo';
-import Slider from '../../common/Slider';
+import { TEAM_MEMBERS } from '@/constants';
+import { TeamMember } from '@/types';
+import BrandLogo from '@/components/common/BrandLogo';
+import Slider from '@/components/common/Slider';
 
 export default function Team() {
     const renderSlides = TEAM_MEMBERS.map((teamMember: TeamMember) => (
@@ -17,7 +17,7 @@ export default function Team() {
     ));
 
     return (
-        <section className={styles.wrapper}>
+        <section id="teamSection" className={styles.teamWrapper}>
             <header className={styles.header}>
                 <BrandLogo variant="mini" className={styles.logo} />
                 <h3 className={styles.headerTitle}>Poznaj Twój zespół seniorów</h3>

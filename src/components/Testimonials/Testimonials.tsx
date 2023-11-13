@@ -1,7 +1,7 @@
 import styles from './testimonials.module.scss';
-import Slider from '../../common/Slider';
+import { TESTIMONIALS } from '@/constants';
+import Slider from '@/components/common/Slider';
 import StarRating from './StarRating';
-import { TESTIMONIALS } from '../../../constants';
 
 export default function Testimonials() {
     const renderTestimonials = TESTIMONIALS.map((testimonial) => (
@@ -9,7 +9,7 @@ export default function Testimonials() {
             <img src={testimonial.imgSrc} aria-disabled className={styles.testimonialImage} />
             <section className={styles.testimonialBody}>
                 <header>
-                    <h3 className={styles.testimonialAuthor}>{testimonial.author}</h3>
+                    <h4 className={styles.testimonialAuthor}>{testimonial.author}</h4>
                     <small className={styles.testimonialRole}>{testimonial.role}</small>
                     <StarRating rating={testimonial.rating} className={styles.testimonialRating} />
                 </header>
@@ -19,9 +19,9 @@ export default function Testimonials() {
     ));
 
     return (
-        <section className={styles.wrapper}>
+        <section id="testimonialsSection" className={styles.testimonialsWrapper}>
             <header className={styles.header}>
-                <h2>Opinie</h2>
+                <h3>Opinie</h3>
             </header>
             <Slider>{renderTestimonials}</Slider>
         </section>

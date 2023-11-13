@@ -1,4 +1,4 @@
-import CTAButton from '../../common/CTAButton';
+import CTAButton from '@/components/common/CTAButton';
 import styles from './heroIntro.module.scss';
 
 export default function HeroIntro() {

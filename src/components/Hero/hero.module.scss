@@ -2,8 +2,6 @@
 
 .heroWrapper {
     align-items: center;
-    background: url(../../../assets/images/hero-background.svg) no-repeat;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     gap: var(--space-xl);
@@ -17,9 +15,6 @@
     }
 
     @include screen-size('lg') {
-        background: url(../../../assets/images/hero-background-big.svg) no-repeat;
-        background-size: cover;
-        background-position: 0 90%;
         flex-wrap: nowrap;
         flex-direction: row;
 
