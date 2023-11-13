@@ -1,4 +1,10 @@
-import { ComponentPropsWithoutRef, LinkHTMLAttributes, ReactNode } from 'react';
+import {
+    ChangeEvent,
+    ComponentPropsWithoutRef,
+    FormEvent,
+    LinkHTMLAttributes,
+    ReactNode,
+} from 'react';
 
 export type PropsWithChildren<P = unknown> = P & { children: ReactNode; className?: string };
 
@@ -27,6 +33,33 @@ export type FormField = {
     type: 'text' | 'number' | 'email' | 'submit' | 'textarea';
     required: boolean;
     errorMessage: string;
+};
+
+export type FormProps = {
+    values: FormState;
+    errors: ErrorsState;
+    fields: FormField[];
+    onSubmit: (e: FormEvent) => Promise<void>;
+    onInputChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    title?: string;
+};
+
+export type LabelProps = PropsWithChildren & {
+    id: string;
+};
+
+export type TextareaProps = {
+    id: string;
+    required: boolean;
+    rows?: number;
+    className?: string;
+};
+
+export type InputProps = {
+    id: string;
+    type: string;
+    required: boolean;
+    className?: string;
 };
 
 export type TeamMember = {
