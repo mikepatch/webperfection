@@ -1,5 +1,5 @@
 import styles from './summary.module.scss';
-import Button from '@/components/common/Button';
+import CTAButton from '../common/CTAButton';
 import ImageSmall from '@/assets/images/summary-mateusz-small.png';
 import ImageBig from '@/assets/images/summary-mateusz-big.png';
 
@@ -25,9 +25,9 @@ export default function Summary() {
                     <p className={styles.footerMentor}>
                         Mateusz Bogolubow - Mentor i Trener Programowania Devmentor.pl
                     </p>
-                    <Button type="button" className={styles.footerButton}>
+                    <CTAButton href="contactFormSection" className={styles.footerButton}>
                         Napisz do nas
-                    </Button>
+                    </CTAButton>
                 </footer>
                 <picture className={styles.contentImage}>
                     <source media="(min-width: 992px)" srcSet={ImageBig} />

@@ -118,7 +118,7 @@ export type IconProps = ComponentPropsWithoutRef<'svg'> & {
 
 export type LinkProps = LinkHTMLAttributes<HTMLAnchorElement> &
     PropsWithChildren & {
-        to: string;
+        href: string;
     };
 
 export type PopupProps = {

@@ -1,8 +1,20 @@
 @import '@styles/common';
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    position: relative;
+
+    .mainWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+        margin: 0 auto;
+        max-width: 1600px;
+        min-height: 100vh;
+    }
+
+    @include screen-size('lg') {
+        .mainWrapper {
+            gap: var(--space-xl);
+        }
+    }
 }

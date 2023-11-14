@@ -8,10 +8,10 @@ export const MENU_ITEMS: MenuItem[] = [
     {
         id: 'aboutProject',
         label: 'O projekcie',
-        href: '/#descriptionSection',
+        href: 'descriptionSection',
     },
-    { id: 'aboutUs', label: 'O nas', href: '/#summarySection' },
-    { id: 'contact', label: 'Kontakt', href: '/#contactFormSection' },
+    { id: 'aboutUs', label: 'O nas', href: 'summarySection' },
+    { id: 'contact', label: 'Kontakt', href: 'contactFormSection' },
 ];
 
 export const OFFER_ITEMS = [

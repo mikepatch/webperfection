@@ -30,7 +30,11 @@ export default function Description() {
                         przyjemna.
                     </p>
                 </section>
-                <CTAButton href="#" variant="bordered" className={styles.ctaButton}>
+                <CTAButton
+                    href="contactFormSection"
+                    variant="bordered"
+                    className={styles.ctaButton}
+                >
                     Współpracuj z nami
                 </CTAButton>
             </article>
