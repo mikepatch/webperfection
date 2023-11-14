@@ -22,6 +22,7 @@ function Form({ title, onSubmit, onInputChange, fields, values, errors, ...props
                 onChange: onInputChange,
                 ...restAttributes,
             };
+
             return (
                 <Field key={id} className={styles.field}>
                     <FieldLabel id={id} className={styles.fieldLabel}>
@@ -50,7 +51,7 @@ function Form({ title, onSubmit, onInputChange, fields, values, errors, ...props
             <div className={styles.body}>
                 {renderFields}
                 <small className={styles.regulations}>
-                    <Link to="#" className={styles.regulationsLink}>
+                    <Link href="#" className={styles.regulationsLink}>
                         Regulamin i warunki współpracy
                     </Link>
                 </small>
