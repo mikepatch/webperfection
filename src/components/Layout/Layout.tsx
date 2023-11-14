@@ -9,7 +9,7 @@ export default function Layout({ children }: PropsWithChildren) {
         <div className={styles.wrapper}>
             <Navigation />
             <Hero />
-            <main>{children}</main>
+            <main className={styles.mainWrapper}>{children}</main>
             <Footer />
         </div>
     );

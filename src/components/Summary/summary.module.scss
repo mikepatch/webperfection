@@ -7,9 +7,13 @@
         'header header'
         'content content';
     overflow: hidden;
-    width: 100%;
+    width: 1400px;
+
+    // width: 100vw;
+    // transform: translateX(calc((40em - 100vw) / 2));
 
     position: relative;
+    left: 0;
 
     &::after {
         display: block;
