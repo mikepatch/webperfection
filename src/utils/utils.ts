@@ -1,4 +1,4 @@
-import { FormState } from '@/types';
+import { FormField, FormState } from '@/types';
 
 export const sendToWebhook = async (webhookUrl: string, values: FormState) => {
     try {
@@ -8,7 +8,7 @@ export const sendToWebhook = async (webhookUrl: string, values: FormState) => {
             body: JSON.stringify(values),
         };
         const response = await fetch(webhookUrl, options);
-        console.log(response);
+
         if (!response.ok) {
             throw new Error(
                 `Request failed with status: ${response.status} ${response.statusText}`
@@ -19,4 +19,12 @@ export const sendToWebhook = async (webhookUrl: string, values: FormState) => {
     } catch (err) {
         console.error(err);
     }
+};
+
+export const getInitialValues = (formFields: FormField[]) => {
+    let initialValues = {};
+
+    formFields.forEach(({ name }) => (initialValues = { ...initialValues, [name]: '' }));
+
+    return initialValues;
 };

@@ -6,14 +6,10 @@ import { FORM_ATTRIBUTES, FORM_FIELDS, FORM_POPUP } from '@/constants';
 import { useForm } from '@/hooks/useForm';
 import Popup from '@/components/common/Popup';
 import Form from '@/components/common/Form';
+import { getInitialValues } from '@/utils';
 
 export default function ContactForm() {
-    const initialValues: FormState = {
-        fullName: '',
-        email: '',
-        budget: '',
-        message: '',
-    };
+    const initialValues: FormState = getInitialValues(FORM_FIELDS);
     const { values, serverResponse, errors, handleChange, handleSubmit } = useForm(
         initialValues,
         FORM_FIELDS
